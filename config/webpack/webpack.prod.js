@@ -43,7 +43,7 @@ const config = {
     ],
   },
   output: {
-    filename: env.isWp ? 'assets/js/[contenthash].js' : '[contenthash].js',
+    filename: env.isWp ? 'assets/js/[name].min.js' : '[contenthash].js',
     ...(env.isWp ? { assetModuleFilename } : {}),
   },
   plugins: [
