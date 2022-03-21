@@ -52,19 +52,21 @@ const config = {
           new CopyPlugin({
             patterns: [
               {
-                from: '../.vscode/',
+                from: '../.vscode',
                 to: '.vscode',
                 noErrorOnMissing: true,
               },
               {
-                from: `${wpContentDir}/config/.gitignore`,
-              },
-              {
-                from: `${wpContentDir}/config/.prettierignore`,
+                from: `${wpContentDir}/config`,
               },
               {
                 from: '../screenshot.png',
                 noErrorOnMissing: true,
+              },
+              {
+                context: `${wpContentDir}/template-parts`,
+                from: `*.php`,
+                to: 'template-parts',
               },
               {
                 context: `${wpContentDir}`,
