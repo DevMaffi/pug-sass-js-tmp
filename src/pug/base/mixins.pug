@@ -1,4 +1,4 @@
-mixin head({ title=projectName, favicon="@files/favicon/favicon.png" } = {})
+mixin head({ title=projectName, favicon=faviconUrl } = {})
   // HEAD
   head
     meta(charset="UTF-8")
@@ -8,7 +8,7 @@ mixin head({ title=projectName, favicon="@files/favicon/favicon.png" } = {})
     block meta
 
     link(rel="shortcut icon" href=`${favicon}` type="image/x-icon")
-    
+
     block links
 
     title= title
