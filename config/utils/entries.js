@@ -1,13 +1,28 @@
 // Modules
 
+// node utils
+import fs from 'fs'
+
+// routes
 import routes from './routes.js'
 
 // Entries
 
-const { pages } = routes
+const { baseDirs, pages } = routes
+
+const getRelPath = page => {
+  let relPath = `./assets/js/${page}`
+
+  ;['js', 'mjs'].forEach(ext => {
+    if (fs.existsSync(`${baseDirs.srcDir}/assets/js/${page}.${ext}`))
+      relPath += `.${ext}`
+  })
+
+  return relPath
+}
 
 const entries = pages.reduce((entries, page) => {
-  entries[page] = ['@babel/polyfill', `./assets/js/${page}.js`]
+  entries[page] = ['@babel/polyfill', getRelPath(page)]
   return entries
 }, {})
 

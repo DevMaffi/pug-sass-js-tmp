@@ -43,11 +43,20 @@ const cssLoaders = extra => {
   return loaders
 }
 
+const babelPresets = extra => {
+  let presets = ['@babel/preset-env']
+
+  if (extra) presets = [...presets, extra]
+
+  return presets
+}
+
 const getRegExObj = () => ({
   html: /\.html$/i,
   css: /\.css$/i,
   sass: /\.s[ac]ss$/i,
   js: /\.m?js$/i,
+  ts: /\.m?ts$/i,
   fonts: /\.woff2?$/i,
   images: /\.(gif|ico|jpe?g|png|svg|webp)$/i,
   sounds: /\.(ogg|mp3|wav|mpe?g)$/i,
@@ -78,6 +87,7 @@ export default {
   getPath,
   applyHtmlPlugin,
   cssLoaders,
+  babelPresets,
   getRegExObj,
   assetModuleFilename,
 }

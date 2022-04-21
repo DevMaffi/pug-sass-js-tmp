@@ -27,10 +27,12 @@ const config = {
   resolve: {
     alias: {
       '@': `${path.srcDir}`,
+      '@classes': `${path.srcDir}/assets/js/model/classes`,
       '@common': `${path.srcDir}/assets/js/modules/common`,
       '@files': `${path.srcDir}/assets/files`,
       '@i18n': `${path.srcDir}/assets/js/i18n`,
       '@images': `${path.srcDir}/assets/images`,
+      '@interfaces': `${path.srcDir}/assets/js/model/interfaces`,
       '@model': `${path.srcDir}/assets/js/model`,
       '@modules': `${path.srcDir}/assets/js/modules`,
       '@sass': `${path.srcDir}/assets/sass`,
@@ -61,11 +63,14 @@ const config = {
       },
       {
         test: regEx.js,
-        resolve: {
-          fullySpecified: false,
-        },
+        resolve: { fullySpecified: false },
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: babelPresets(),
+          },
+        },
       },
       {
         test: regEx.images,
