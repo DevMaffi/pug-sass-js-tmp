@@ -11,7 +11,7 @@ import functions from './functions.js'
 
 // Config
 
-const { getPath, cssLoaders, getRegExObj } = functions
+const { getPath, cssLoaders, babelPresets, getRegExObj } = functions
 
 const path = getPath()
 
