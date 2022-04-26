@@ -8,7 +8,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
   "extends": "airbnb-base",
   "ignorePatterns": [
@@ -27,6 +28,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
+  "plugins": ["jest"],
   "rules": {
     "array-callback-return": 1,
     "arrow-body-style": 0,
