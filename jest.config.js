@@ -13,7 +13,7 @@ const config = {
     '^@common$': '<rootDir>/src/assets/js/modules/common/index.js',
     '^@files/(.*)$': '<rootDir>/src/assets/files/$1',
     '^@i18n$': '<rootDir>/src/assets/js/i18n/index.js',
-    '^@images/(.*)$': '<rootDir>/src/assets/images/$1',
+    '^@img/(.*)$': '<rootDir>/src/assets/images/$1',
     '^@interfaces$': '<rootDir>/src/assets/js/model/interfaces/index.js',
     '^@model$': '<rootDir>/src/assets/js/model/index.js',
     '^@modules$': '<rootDir>/src/assets/js/modules/index.js',
