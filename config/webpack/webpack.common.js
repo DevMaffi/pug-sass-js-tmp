@@ -32,7 +32,6 @@ const config = {
       '@files': `${path.srcDir}/assets/files`,
       '@i18n': `${path.srcDir}/assets/js/i18n`,
       '@img': `${path.srcDir}/assets/images`,
-      '@interfaces': `${path.srcDir}/assets/js/model/interfaces`,
       '@model': `${path.srcDir}/assets/js/model`,
       '@modules': `${path.srcDir}/assets/js/modules`,
       '@sass': `${path.srcDir}/assets/sass`,

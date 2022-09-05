@@ -14,7 +14,6 @@ const config = {
     '^@files/(.*)$': '<rootDir>/src/assets/files/$1',
     '^@i18n$': '<rootDir>/src/assets/js/i18n/index.js',
     '^@img/(.*)$': '<rootDir>/src/assets/images/$1',
-    '^@interfaces$': '<rootDir>/src/assets/js/model/interfaces/index.js',
     '^@model$': '<rootDir>/src/assets/js/model/index.js',
     '^@modules$': '<rootDir>/src/assets/js/modules/index.js',
     '^@sass/(.*)$': '<rootDir>/src/assets/sass/$1',
